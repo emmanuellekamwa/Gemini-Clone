@@ -97,3 +97,81 @@ body {
 .suggestions .suggestions-item:nth-child(4) span {
     color: #6f42c1;
 }
+
+.prompt-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    background: #101623;
+}
+
+.prompt-container :where(.prompt-wrapper, .prompt-form, .prompt-actions){
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 56px;
+}
+
+.prompt-wrapper .prompt-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 130px;
+    background: #283045;
+}
+
+.prompt-form .prompt-input {
+    width: 100%;
+    height: 100%;
+    padding-left: 24px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #edf3ff;
+    font-size: 1rem;
+}
+
+.prompt-form .prompt-input::placeholder {
+    color: #c3cdde;
+}
+
+.prompt-wrapper button{
+    width: 56px;
+    height: 100%;
+    background: #283045;
+    border: none;
+    border-radius: 50%;
+    color: #edf3ff;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.prompt-wrapper button:hover {
+    background: #333e58;
+}
+
+.prompt-form .prompt-actions button {
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+}
+
+.prompt-form #send-prompt-btn {
+    color: #fff;
+    display: none;
+    background: #1d7efd;
+}
+
+.prompt-form .prompt-input:valid ~ .prompt-actions #send-prompt-btn {
+    display: block;
+}
+
+.prompt-container .disclaimer-text {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 16px 20px 0;
+    color: #c3cdde;
+}
